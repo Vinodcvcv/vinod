@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width , initial-scale=1.0">
+        <style>
+            body{
+    background-color:#c2c2c2;
+
+}
+h1{
+    background-color: black;
+    color:#c2c2c2;
+    border-radius: 15px;
+    box-shadow: 2px 2px 2px aqua,-2px -2px 2px aqua;
+}
+p{
+    color:black;
+}
+button,input{
+    background-color:black;
+    color:aqua;
+    border-radius: 5px;
+    cursor:pointer;
+}
+button:hover{
+    background-color:aqua;
+    color:black;
+    border-radius: 5px;
+}
+#name , #naam {
+    display:inline-block;
+}
+#gender  , #linga{
+    display:inline-block;
+}
+        </style>
+        <script>
+            function check(){
+                let name,gen;
+                name=document.getElementById('name').value;
+                gen=document.getElementById('gender').value;
+                if(name=='vinod' && gen=='male'){
+                    alert("gender is correct");
+                }
+                else{
+                    alert("gender is incorrect")
+                }
+            }
+        </script>
+        <title>check gender</title>
+    </head>
+    <body><center>
+        <h1>welcome</h1>
+        <p id="naam">enter your name</p>
+        <input id="name" placeholder="name">
+        <br>
+        <p id="linga">select gender</p>
+        <input list="gender">
+        <datalist id="gender">
+            <option value="male"></option>
+            <option value="female"></option>
+            <option value="custom"></option>
+        </datalist><br>
+        <button onclick="check()" id="gen">submit</button>
+    </body></center>
+</html>
